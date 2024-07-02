@@ -1,0 +1,12 @@
+name: settings
+version: '${project.version}'
+main: wcorrupt.settings.Settings
+api-version: '1.20'
+authors: [wcorrupt]
+commands:
+  settings:
+    description: Toggle message settings
+    usage: /settings
+  uservoted:
+    description: Send a user voted message
+    usage: /uservoted <player> <text>

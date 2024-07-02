@@ -1,0 +1,4 @@
+settings:
+  death: true
+  join: true
+  vote: true
