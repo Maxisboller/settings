@@ -34,8 +34,10 @@ public class PlayerSettingsManager {
             try {
                 UUID playerId = UUID.fromString(key);
                 Map<String, Boolean> settings = new HashMap<>();
-                for (String setting : config.getConfigurationSection(key).getKeys(false)) {
-                    settings.put(setting, config.getBoolean(key + "." + setting));
+                if (config.getConfigurationSection(key) != null) {
+                    for (String setting : config.getConfigurationSection(key).getKeys(false)) {
+                        settings.put(setting, config.getBoolean(key + "." + setting));
+                    }
                 }
                 playerSettings.put(playerId, settings);
             } catch (IllegalArgumentException e) {
