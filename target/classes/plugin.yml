@@ -10,3 +10,4 @@ commands:
   uservoted:
     description: Send a user voted message
     usage: /uservoted <player> <text>
+    permission: uservoted.use
