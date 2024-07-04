@@ -1,7 +1,0 @@
-wcorrupt\settings\Settings.class
-wcorrupt\settings\commands\SettingsCommand.class
-wcorrupt\settings\util\PlayerSettingsManager.class
-wcorrupt\settings\listeners\PlayerEventListener.class
-wcorrupt\settings\listeners\SettingsClickListener.class
-wcorrupt\settings\commands\UserVotedCommand.class
-wcorrupt\settings\listeners\PlayerEventListener$1.class
