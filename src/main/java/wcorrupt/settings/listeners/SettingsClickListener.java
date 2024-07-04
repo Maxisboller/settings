@@ -38,17 +38,21 @@ public class SettingsClickListener implements Listener {
         String option = null;
 
         switch (slot) {
-            case 11:
-            case 20:
+            case 10:
+            case 19:
                 option = "death";
                 break;
-            case 13:
-            case 22:
+            case 12:
+            case 21:
                 option = "join";
                 break;
-            case 15:
-            case 24:
+            case 14:
+            case 23:
                 option = "vote";
+                break;
+            case 16:
+            case 25:
+                option = "public_chat";
                 break;
         }
 
@@ -60,9 +64,10 @@ public class SettingsClickListener implements Listener {
 
     private void updateGUI(Inventory inv, Player player) {
         PlayerSettingsManager manager = Settings.getInstance().getPlayerSettingsManager();
-        setOptionItem(inv, 11, "Death Messages", manager.isSettingEnabled(player, "death"));
-        setOptionItem(inv, 13, "Join/Leave Messages", manager.isSettingEnabled(player, "join"));
-        setOptionItem(inv, 15, "Vote Messages", manager.isSettingEnabled(player, "vote"));
+        setOptionItem(inv, 10, "Death Messages", manager.isSettingEnabled(player, "death"));
+        setOptionItem(inv, 12, "Join/Leave Messages", manager.isSettingEnabled(player, "join"));
+        setOptionItem(inv, 14, "Vote Messages", manager.isSettingEnabled(player, "vote"));
+        setOptionItem(inv, 16, "Public Chat", manager.isSettingEnabled(player, "public_chat"));
     }
 
     private void setOptionItem(Inventory inv, int slot, String name, boolean enabled) {

@@ -51,7 +51,7 @@ public class PlayerSettingsManager {
         UUID playerId = player.getUniqueId();
         Map<String, Boolean> settings = playerSettings.get(playerId);
         for (Map.Entry<String, Boolean> entry : settings.entrySet()) {
-            config.set(playerId.toString() + "." + entry.getKey(), entry.getValue());
+            config.set(playerId + "." + entry.getKey(), entry.getValue());
         }
         Settings.getInstance().saveConfig();
     }
@@ -61,6 +61,7 @@ public class PlayerSettingsManager {
         defaultSettings.put("death", true);
         defaultSettings.put("join", true);
         defaultSettings.put("vote", true);
+        defaultSettings.put("public_chat", true);
         return defaultSettings;
     }
 }
